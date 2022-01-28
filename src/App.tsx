@@ -1,25 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Routes as Router } from "./Routes";
 import './App.css';
+import _ from 'lodash';
+import Topbar from './Components/Topbar/Topbar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="layout">
+      <Topbar />
+      <Routes>
+        {_.map(Router.container, (each, index) => {
+          const Component: any = each.Component;
+          return <Route path={each.path} element={Component ? <Component /> : null} key={index} />;
+        })}
+      </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
