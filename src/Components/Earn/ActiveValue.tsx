@@ -38,11 +38,11 @@ const ActiveValue: FC<PositionProps> = (props: PositionProps) => {
         <div className={style.positions}>
             <img src={logo} alt="icon" />
             <div className={`${style.s_text} ${style.s_h4} ${style.s_weight_bold}`}>
-                Your Positions
+                Active Vaults
             </div>
             <span className={`${style.s_text} ${style.s_body2} ${style.s_secondary_color}`}>
                 <span className={`${style.s_text} ${style.s_body2} ${style.s_secondary_color} ${style.s_text_numbers}`}>
-                    (0 position in total)
+                    (17 vaults in tota)
                 </span>
             </span>
             <FormControl sx={{ m: 1, width: 150, border: '1px grey solid', borderRadius: 1, color: 'white' }}>
