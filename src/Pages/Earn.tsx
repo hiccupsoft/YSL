@@ -90,6 +90,10 @@ const Earn = () => {
                                 <div className="ant-tabs-tabpane ant-tabs-tabpane-active">
                                     <div className="ant-collapse ant-collapse-icon-position-right earn-collapse">
                                         <TabList />
+                                        <TabList />
+                                        <TabList />
+                                        <TabList />
+                                        <TabList />
                                     </div>
                                 </div>
                             </div>
